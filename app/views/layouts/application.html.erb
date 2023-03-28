@@ -12,6 +12,8 @@
 
   <body>
     <div class="container">
+      <%= render "layouts/navbar" if user_signed_in? %>
+
       <%= yield %>
     </div>
   </body>
