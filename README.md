@@ -17,3 +17,6 @@
 - The audit decorator might need a factory pattern
 - Didn't focus on design due to lack of time.
 - For a better user experience Turbo frames can be used, lack of time again
+
+## To start
+- Run rake db:create && rake db:migrate && bin/dev
