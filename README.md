@@ -19,4 +19,10 @@
 - For a better user experience Turbo frames can be used, lack of time again
 
 ## To start
-- Run rake db:create && rake db:migrate && bin/dev
+```
+git clone git@github.com:CatalinVoineag/project_conversation_history.git project_conversation_history
+cd project_conversation_history
+yarn
+bin/setup
+bin/dev
+```
