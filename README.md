@@ -13,6 +13,7 @@
 
 
 ## Notes
+- I tried to focus on the core functionality, due to a lack of time I built this like a spike/prototype, meant to spark a conversation or to agree on a solution on how to implement this feature.
 - The audit decorator might need a factory pattern
 - Didn't focus on design due to lack of time.
 - For a better user experience Turbo frames can be used, lack of time again
