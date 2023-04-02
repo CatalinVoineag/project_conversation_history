@@ -26,3 +26,4 @@ yarn
 bin/setup
 bin/dev
 ```
+- Visit localhost:3000 and create an account
