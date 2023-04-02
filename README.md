@@ -10,3 +10,9 @@
 
 ## Can we use gems?
 - Yes, we don't really want to reinvent the wheel.
+
+
+## Notes
+- The audit decorator might need a factory pattern
+- Didn't focus on design due to lack of time.
+- For a better user experience Turbo frames can be used, lack of time again

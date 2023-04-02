@@ -69,3 +69,4 @@ end
 
 gem 'devise'
 gem 'byebug'
+gem "audited", "~> 5.0"

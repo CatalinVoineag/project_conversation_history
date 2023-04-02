@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1 or /projects/1.json
   def show
+    @decorated_project = ProjectDecorator.new(@project)
   end
 
   # GET /projects/new

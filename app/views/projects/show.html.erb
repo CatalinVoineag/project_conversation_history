@@ -1,17 +1,41 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <div class="row">
 
-<%= render @project %>
+    <div class="col-7">
+      <p style="color: green"><%= notice %></p>
 
-<%= form_with url: project_comments_path(@project) do |form| %>
-  <%= form.label :body, "Comment" %>
-  <%= form.text_field :body %>
+      <%= render @decorated_project %>
 
-  <%= form.submit %>
-<% end %>
+      <%= form_with url: project_comments_path(@decorated_project) do |form| %>
+        <%= form.label :body, "Comment" %>
+        <%= form.text_field :body %>
 
-<div>
-  <%= link_to "Edit this project", edit_project_path(@project) %> |
-  <%= link_to "Back to projects", projects_path %>
+        <%= form.submit %>
+      <% end %>
 
-  <%= button_to "Destroy this project", @project, method: :delete %>
+      <%= form_with model: @decorated_project do |form| %>
+        <%= form.label :status, style: "display: block" %>
+        <%= form.number_field :status %>
+
+        <%= form.submit %>
+      <% end %>
+
+      <div>
+        <%= link_to "Edit this project", edit_project_path(@decorated_project) %>
+        <%= link_to "Back to projects", projects_path %>
+
+        <%= button_to "Destroy this project", @decorated_project, method: :delete %>
+      </div>
+    </div>
+
+    <div class="col-5">
+      <ul>
+        <% @decorated_project.ordered_timeline_items.each do |timeline_item| %>
+          <li>
+            <%= timeline_item.timeline_message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
